@@ -58,7 +58,7 @@ public class RegisterServlet extends HttpServlet {
         System.out.println("UserName: "+username);
 
         password = PasswordHashing.encryptPassword(password);
-//
+
         UserSignUp userModel = new UserSignUp(username, email, password, firstname, lastname, gender);
 
 

@@ -106,6 +106,7 @@
         </div>
         <div class="col-md-5" id="login-container">
             <form class="login-form" method="post" action="${pageContext.request.contextPath}/LoginServlet">
+
                 <div class="mb-3">
                     <input type="text" class="form-control" name="username" placeholder="User name" required>
                 </div>

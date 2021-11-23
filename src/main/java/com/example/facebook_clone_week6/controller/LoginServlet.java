@@ -27,10 +27,13 @@ public class LoginServlet extends HttpServlet {
         //from user DOA
         UsersDAO userDataBase = new UsersDAO(DbConnection.getConnection());
         UserSignUp user = userDataBase.loginUser(username, password);
+        System.out.println(user);
+        System.out.println("========45");
 
         if(user != null){
             httpSession.setAttribute("user", user);
             response.sendRedirect("homePage.jsp");
+            System.out.println("============");
         }else{
             httpSession.setAttribute("Registration Error", "User not found, Enter Correct Password or Email");
             response.sendRedirect("index.jsp");

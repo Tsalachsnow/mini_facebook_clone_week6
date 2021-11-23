@@ -68,9 +68,9 @@ public class UsersDAO {
 
                 String decryptPass = PasswordHashing.decryptPassword(result.getString("password"));
 
-                if(!decryptPass.equals(password)){
-                    return null;
-                }
+//                if(!decryptPass.equals(password)){
+//                    return null;
+//                }
             }
         }catch(Exception e){
         }
@@ -82,7 +82,7 @@ public class UsersDAO {
     public boolean deleteUser(String email){
         boolean success =  false;
         try {
-            String query = "delete from users where email= ?";
+            String query = "delete from user where email= ?";
             PreparedStatement prepared = this.dbConnection.prepareStatement(query);
             prepared.setString(1, email);
 
